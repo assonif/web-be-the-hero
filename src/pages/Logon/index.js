@@ -4,7 +4,7 @@ import { FiLogIn } from 'react-icons/fi';
 
 import api from '../../services/api';
 
-import { Container, Form } from './styles';
+import { Form } from './styles';
 
 import heroesImage from '../../assets/heroes.png';
 import logoImage from '../../assets/logo.svg';
@@ -30,7 +30,7 @@ export default function Logon() {
   }
 
   return (
-    <Container>
+    <div className="container">
       <Form>
         <img src={logoImage} alt="Be The Hero" />
 
@@ -51,6 +51,6 @@ export default function Logon() {
         </form>
       </Form>
       <img src={heroesImage} alt="Heroes" />
-    </Container>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import PropTypes from 'prop-types';
 
 import { Container } from './styles';
 
@@ -26,3 +27,10 @@ export default function RegisterSection({
     </Container>
   );
 }
+
+RegisterSection.propTypes = {
+  header: PropTypes.string.isRequired,
+  paragraph: PropTypes.string.isRequired,
+  route: PropTypes.string.isRequired,
+  backLink: PropTypes.string.isRequired,
+};

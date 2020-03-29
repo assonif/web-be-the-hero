@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import RegisterSection from '../../components/RegisterSection';
 
 import api from '../../services/api';
-import { Container, InternalContainer, Form } from './styles';
+import { Form } from './styles';
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -32,8 +32,8 @@ export default function Register() {
   }
 
   return (
-    <Container>
-      <InternalContainer>
+    <div className="container">
+      <div className="internal-container">
         <RegisterSection
           header="Cadastro"
           paragraph="Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os
@@ -78,7 +78,7 @@ export default function Register() {
             Cadastrar
           </button>
         </Form>
-      </InternalContainer>
-    </Container>
+      </div>
+    </div>
   );
 }

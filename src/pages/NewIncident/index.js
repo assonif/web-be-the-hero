@@ -4,7 +4,7 @@ import RegisterSection from '../../components/RegisterSection';
 
 import api from '../../services/api';
 
-import { Container, InternalContainer, Form } from './styles';
+import { Form } from './styles';
 
 export default function NewIncident() {
   const [title, setTitle] = useState('');
@@ -34,8 +34,8 @@ export default function NewIncident() {
   }
 
   return (
-    <Container>
-      <InternalContainer>
+    <div className="container">
+      <div className="internal-container">
         <RegisterSection
           header="Cadastrar novo caso"
           paragraph="Descreva o caso detalhadamento para encontrar um herói para resolver isso."
@@ -66,7 +66,7 @@ export default function NewIncident() {
             Cadastrar{' '}
           </button>
         </Form>
-      </InternalContainer>
-    </Container>
+      </div>
+    </div>
   );
 }
