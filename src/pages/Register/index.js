@@ -1,29 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FiArrowLeft } from 'react-icons/fi';
 
-import { Container, InternalContainer, Section, Form } from './styles';
+import RegisterSection from '../../components/RegisterSection';
 
-import logoImage from '../../assets/logo.svg';
+import { Container, InternalContainer, Form } from './styles';
 
 export default function Register() {
   return (
     <Container>
       <InternalContainer>
-        <Section>
-          <img src={logoImage} alt="Be The Hero" />
-
-          <h1>Cadastro</h1>
-          <p>
-            Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem
-            os casos da sua ONG.
-          </p>
-
-          <Link className="back-link" to="/">
-            <FiArrowLeft size={16} color="E02041" />
-            Já sou cadastrado
-          </Link>
-        </Section>
+        <RegisterSection
+          header="Cadastro"
+          paragraph="Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os
+        casos da sua ONG."
+          route="/"
+          backLink="Já sou cadastrado"
+        />
 
         <Form>
           <input placeholder="Nome da ONG" />
